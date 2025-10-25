@@ -164,6 +164,7 @@ a:hover {
 .btn-disabled {
   pointer-events: none;
   cursor: default;
+  opacity: 0.5;
 }
 
 .badge {
@@ -679,7 +680,6 @@ textarea.input {
     padding: 4rem 1rem;
   }
 
-  .project-card,
   .project-card .badges,
   .project-card p {
     padding-left: 1rem;
