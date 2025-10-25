@@ -191,13 +191,15 @@ function openModal(data) {
   modalDemoLink.href = data.demoUrl;
   modalCodeLink.href = data.codeUrl;
 
-  if (!modalDemoLink.href) {
+  console.log(modalDemoLink.href, data.demoUrl);
+
+  if (data.demoUrl === "#") {
     modalDemoLink.classList.add("btn-disabled");
   } else {
     modalDemoLink.classList.remove("btn-disabled");
   }
 
-  if (!modalCodeLink.href) {
+  if (data.codeUrl === "#") {
     modalCodeLink.classList.add("btn-disabled");
   } else {
     modalCodeLink.classList.remove("btn-disabled");
@@ -233,7 +235,7 @@ clickableImages.forEach((image) => {
     const data = {
       title: image.getAttribute("data-title"),
       description: image.getAttribute("data-description"),
-      images: image.getAttribute("data-images"), // Novo atributo
+      images: image.getAttribute("data-images"),
       demoUrl: image.getAttribute("data-demo-url"),
       codeUrl: image.getAttribute("data-code-url"),
     };
