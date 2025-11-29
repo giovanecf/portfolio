@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,17 +23,21 @@
         ><span class="g-logo-letter">G</span>Geovani Figueiredo</a
       >
       <nav class="nav-links">
-        <a href="#skills" class="nav-item">Habilidades</a>
-        <a href="#projects" class="nav-item">Projetos</a>
-        <a href="#contact" class="nav-item">Contato</a>
+        <a href="#skills" class="nav-item" data-i18n="navSkills">Skills</a>
+        <a href="#projects" class="nav-item" data-i18n="navProjects"
+          >Projects</a
+        >
+        <a href="#contact" class="nav-item" data-i18n="navContact">Contact</a>
       </nav>
+
       <a
         href="https://drive.google.com/file/d/1FIzdTqedYCPx8K-NE57j-pWPQlKTKzc8/view?usp=sharing"
         class="btn btn-primary"
         title="Download CV"
         target="_blank"
         rel="noopener"
-        >Download CV</a
+        ><i class="fa-solid fa-circle-down me-2"></i>
+        <span data-i18n="downloadCV">Download CV</span></a
       >
     </header>
 
@@ -47,16 +51,16 @@
     <section id="home" class="section hero-section">
       <div class="hero-content">
         <h1 class="text-xl">
-          Criando com
+          <span data-i18n="heroTitle">Creating with</span>
           <span id="dynamic-stack-text" class="text-primary-color"></span
           ><span class="type-cursor">|</span>
         </h1>
-        <h2 class="text-lg">
-          FULLSTACK DEVELOPER | CONSTRUINDO EXPERIÊNCIAS WEB INCRÍVEIS
+        <h2 class="text-lg" data-i18n="heroSubtitle">
+          FULLSTACK DEVELOPER | BUILDING AMAZING WEB EXPERIENCES
         </h2>
-        <p class="text-muted mb-8">
-          Apaixonado por criar soluções intuitivas, escaláveis e de alta
-          performance.
+        <p class="text-muted mb-8" data-i18n="heroDescription">
+          Passionate about creating intuitive, scalable, and high-performance
+          solutions.
         </p>
         <div class="social-icons">
           <a
@@ -96,10 +100,12 @@
     </section>
 
     <section id="skills" class="section">
-      <h2 class="section-title">MINHAS HABILIDADES</h2>
+      <h2 class="section-title" data-i18n="sectionSkillsTitle">MY SKILLS</h2>
       <div class="card p-8 skills-grid">
         <div class="skill-category">
-          <h3 class="skill-title">FRONTEND</h3>
+          <h3 class="skill-title" data-i18n="skillCategoryFrontend">
+            FRONTEND
+          </h3>
           <div class="badges">
             <span class="badge">React</span>
             <span class="badge">Next.js</span>
@@ -112,7 +118,7 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3 class="skill-title">BACKEND</h3>
+          <h3 class="skill-title" data-i18n="skillCategoryBackend">BACKEND</h3>
           <div class="badges">
             <span class="badge">Node.js</span>
             <span class="badge">Express.js</span>
@@ -124,7 +130,9 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3 class="skill-title">BANCO DE DADOS</h3>
+          <h3 class="skill-title" data-i18n="skillCategoryDatabase">
+            DATABASE
+          </h3>
           <div class="badges">
             <span class="badge">MySQL</span>
             <span class="badge">SQLite</span>
@@ -133,7 +141,9 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3 class="skill-title">DEVOPS E PLATAFORMAS</h3>
+          <h3 class="skill-title" data-i18n="skillCategoryDevOps">
+            DEVOPS AND PLATFORMS
+          </h3>
           <div class="badges">
             <span class="badge">Docker</span>
             <span class="badge">Portainer.io</span>
@@ -149,25 +159,35 @@
     </section>
 
     <section id="projects" class="section">
-      <h2 class="section-title">MEUS PROJETOS</h2>
-      <h3 class="section-subtitle">PROJETOS PROFISSIONAIS</h3>
+      <h2 class="section-title" data-i18n="sectionProjectsTitle">
+        MY PROJECTS
+      </h2>
+      <h3
+        class="section-subtitle"
+        data-i18n="sectionProjectsSubtitleProfessional"
+      >
+        PROFESSIONAL PROJECTS
+      </h3>
       <div class="projects-grid">
         <div class="card project-card">
           <div class="project-image">
             <div
               class="project-img-placeholder"
-              data-title="Site Institucional FAFAR"
-              data-description="Site Institucional para a Faculdade de Farmácia da UFMG"
+              data-title="FAFAR Institutional Website"
+              data-description="Institutional Website for the Faculty of Pharmacy at UFMG"
               data-images="images/p1.png"
               data-demo-url="https://www.farmacia.ufmg.br"
               data-code-url="https://github.com/suportefafar/institutional-astra-child-theme"
             >
-              <img src="images/p1.png" alt="Imagem Site Institucional FAFAR" />
+              <img
+                src="images/p1.png"
+                alt="FAFAR Institutional Website Image"
+              />
             </div>
           </div>
-          <h3 class="project-title">Site Institucional FAFAR</h3>
-          <p class="text-muted mb-4">
-            Site Institucional para a Faculdade de Farmácia da UFMG
+          <h3 class="project-title">FAFAR Institutional Website</h3>
+          <p class="text-muted mb-4" data-i18n="projectDescriptionFafarSite">
+            Institutional Website for the Faculty of Pharmacy at UFMG
           </p>
           <div class="badges mb-4">
             <span class="badge">WordPress</span>
@@ -180,13 +200,15 @@
               href="https://www.farmacia.ufmg.br"
               target="_blank"
               class="btn btn-sm btn-primary"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="https://github.com/suportefafar/institutional-astra-child-theme"
               target="_blank"
               class="btn btn-sm btn-secondary"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -195,18 +217,21 @@
           <div class="project-image">
             <div
               class="project-img-placeholder"
-              data-title="Intranet FAFAR"
-              data-description="Intranet para a Faculdade de Farmácia da UFMG"
+              data-title="FAFAR Intranet"
+              data-description="Intranet for the Faculty of Pharmacy at UFMG"
               data-images="images/p2.png"
               data-demo-url="#"
               data-code-url="https://github.com/suportefafar/intranet-astra-child-theme"
             >
-              <img src="images/p2.png" alt="Imagem Intranet FAFAR" />
+              <img src="images/p2.png" alt="FAFAR Intranet Image" />
             </div>
           </div>
-          <h3 class="project-title">Intranet FAFAR</h3>
-          <p class="text-muted mb-4">
-            Intranet para a Faculdade de Farmácia da UFMG
+          <h3 class="project-title">FAFAR Intranet</h3>
+          <p
+            class="text-muted mb-4"
+            data-i18n="projectDescriptionFafarIntranet"
+          >
+            Intranet for the Faculty of Pharmacy at UFMG
           </p>
           <div class="badges mb-4">
             <span class="badge">WordPress</span>
@@ -216,14 +241,18 @@
             <span class="badge">Docker</span>
           </div>
           <div class="project-actions">
-            <a target="_blank" class="btn btn-sm btn-primary btn-disabled"
-              >VER</a
+            <a
+              target="_blank"
+              class="btn btn-sm btn-primary btn-disabled"
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="https://github.com/suportefafar/intranet-astra-child-theme"
               target="_blank"
               class="btn btn-sm btn-secondary"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -233,22 +262,19 @@
             <div
               class="project-img-placeholder"
               data-title="Escuta FAFAR"
-              data-description="Sistema Web para registro de sessões de apoio psicológico aos estudantes, permitindo à
-universidade acompanhar problemas comuns, analisar tendências e melhorar os serviços estudantis com base
-em dados."
+              data-description="Web System for recording psychological support sessions for students, allowing the university to track common issues, analyze trends, and improve student services based on data."
               data-images="images/p3.png"
               data-demo-url="#"
               data-code-url="#"
             >
-              <img src="images/p3.png" alt="Imagem Escuta FAFAR" />
+              <img src="images/p3.png" alt="Escuta FAFAR Image" />
             </div>
           </div>
           <h3 class="project-title">Escuta FAFAR</h3>
-          <p class="text-muted mb-4">
-            Sistema Web para registro de sessões de apoio psicológico aos
-            estudantes, permitindo à universidade acompanhar problemas comuns,
-            analisar tendências e melhorar os serviços estudantis com base em
-            dados.
+          <p class="text-muted mb-4" data-i18n="projectDescriptionEscutaFafar">
+            Web System for recording psychological support sessions for
+            students, allowing the university to track common issues, analyze
+            trends, and improve student services based on data.
           </p>
           <div class="badges mb-4">
             <span class="badge">Ruby on Rails</span>
@@ -260,13 +286,15 @@ em dados."
               href="#"
               target="_blank"
               class="btn btn-sm btn-primary btn-disabled"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="#"
               target="_blank"
               class="btn btn-sm btn-secondary btn-disabled"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -276,19 +304,17 @@ em dados."
             <div
               class="project-img-placeholder"
               data-title="StageManager"
-              data-description="Sistema Web para gerenciamento de projeção de mídias e timers para
-            paletras."
+              data-description="Web System for managing media projection and timers for lectures."
               data-images="images/p41.png,images/p42.png,images/p43.png"
               data-demo-url="#"
               data-code-url="https://github.com/suportefafar/stagemanager"
             >
-              <img src="images/p41.png" alt="Imagem StageManager" />
+              <img src="images/p41.png" alt="StageManager Image" />
             </div>
           </div>
           <h3 class="project-title">StageManager</h3>
-          <p class="text-muted mb-4">
-            Sistema Web para gerenciamento de projeção de mídias e timers para
-            paletras.
+          <p class="text-muted mb-4" data-i18n="projectDescriptionStageManager">
+            Web System for managing media projection and timers for lectures.
           </p>
           <div class="badges mb-4">
             <span class="badge">HTML</span>
@@ -301,13 +327,15 @@ em dados."
               href=""
               target="_blank"
               class="btn btn-sm btn-primary btn-disabled"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="https://github.com/suportefafar/stagemanager"
               target="_blank"
               class="btn btn-sm btn-secondary"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -317,22 +345,18 @@ em dados."
             <div
               class="project-img-placeholder"
               data-title="FAFAR CF7CRUD WP Plugin"
-              data-description="Add-on para Contact Form 7, que permite a criação e edição de
-            objetos com base no formulário criado pelo CF7."
+              data-description="WordPress Add-on for Contact Form 7, which allows the creation and editing of objects based on the form created by CF7."
               data-images="images/p5.png"
               data-demo-url="#"
               data-code-url="https://github.com/suportefafar/fafar-cf7crud"
             >
-              <img
-                src="images/p5.png"
-                alt="Imagem ilustrativa do plugin FAFAR CF7CRUD WP"
-              />
+              <img src="images/p5.png" alt="FAFAR CF7CRUD WP Plugin Image" />
             </div>
           </div>
           <h3 class="project-title">FAFAR CF7CRUD WP Plugin</h3>
-          <p class="text-muted mb-4">
-            Add-on WordPress para Contact Form 7, que permite a criação e edição
-            de objetos com base no formulário criado pelo CF7.
+          <p class="text-muted mb-4" data-i18n="projectDescriptionCf7Crud">
+            WordPress Add-on for Contact Form 7, which allows the creation and
+            editing of objects based on the form created by CF7.
           </p>
           <div class="badges mb-4">
             <span class="badge">WordPress</span>
@@ -343,13 +367,15 @@ em dados."
               href="#"
               target="_blank"
               class="btn btn-sm btn-primary btn-disabled"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="https://github.com/suportefafar/fafar-cf7crud"
               target="_blank"
               class="btn btn-sm btn-secondary"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -359,20 +385,17 @@ em dados."
             <div
               class="project-img-placeholder"
               data-title="Hermes"
-              data-description="Serviço de envio de e-mails em Node.js com Nodemailer."
+              data-description="Email sending service in Node.js with Nodemailer."
               data-images="images/p6.png"
               data-demo-url="#"
               data-code-url="https://github.com/suportefafar/hermes"
             >
-              <img
-                src="images/p6.png"
-                alt="Imagem ilustrativa do serviço Hermes"
-              />
+              <img src="images/p6.png" alt="Hermes Service Image" />
             </div>
           </div>
           <h3 class="project-title">Hermes</h3>
-          <p class="text-muted mb-4">
-            Serviço de envio de e-mails em Node.js com Nodemailer
+          <p class="text-muted mb-4" data-i18n="projectDescriptionHermes">
+            Email sending service in Node.js with Nodemailer
           </p>
           <div class="badges mb-4">
             <span class="badge">Node.js</span>
@@ -384,13 +407,15 @@ em dados."
               href="#"
               target="_blank"
               class="btn btn-sm btn-primary btn-disabled"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="https://github.com/suportefafar/hermes"
               target="_blank"
               class="btn btn-sm btn-secondary"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -400,22 +425,21 @@ em dados."
             <div
               class="project-img-placeholder"
               data-title="Prometheus Bot"
-              data-description="Serviço de raspagem de dados na web, para integração com serviços e
-            automatização de tarefas burocráticas."
+              data-description="Web data scraping service, for integration with services and automation of bureaucratic tasks."
               data-images="images/p7.png"
               data-demo-url="#"
               data-code-url="#"
             >
-              <img
-                src="images/p7.png"
-                alt="Imagem ilustrativa do serviço Prometheus"
-              />
+              <img src="images/p7.png" alt="Prometheus Bot Image" />
             </div>
           </div>
           <h3 class="project-title">Prometheus Bot</h3>
-          <p class="text-muted mb-4">
-            Serviço de raspagem de dados na web, para integração com serviços e
-            automatização de tarefas burocráticas.
+          <p
+            class="text-muted mb-4"
+            data-i18n="projectDescriptionPrometheusBot"
+          >
+            Web data scraping service, for integration with services and
+            automation of bureaucratic tasks.
           </p>
           <div class="badges mb-4">
             <span class="badge">Node.js</span>
@@ -428,13 +452,15 @@ em dados."
               href="#"
               target="_blank"
               class="btn btn-sm btn-primary btn-disabled"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="#"
               target="_blank"
               class="btn btn-sm btn-secondary btn-disabled"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -444,20 +470,21 @@ em dados."
             <div
               class="project-img-placeholder"
               data-title="Direct Mail Sender"
-              data-description="Sistema Web gerenciador de mala direta, com envio agendado.
-            Utilizado em projeto de pesquisa, publicado, para aquisição de dados."
+              data-description="Web System for managing direct mail, with scheduled sending. Used in a published research project for data acquisition."
               data-images="images/p81.png,images/p82.png,images/p83.png"
               data-demo-url="#"
               data-code-url="#"
             >
-              <img src="images/p81.png" alt="Imagem do Direct Mail Sender" />
+              <img src="images/p81.png" alt="Direct Mail Sender Image" />
             </div>
           </div>
           <h3 class="project-title">Direct Mail Sender</h3>
-          <p class="text-muted mb-4">
-            Sistema Web gerenciador de mala direta, com envio agendado.
-            Utilizado em projeto de pesquisa, publicado, para aquisição de
-            dados.
+          <p
+            class="text-muted mb-4"
+            data-i18n="projectDescriptionDirectMailSender"
+          >
+            Web System for managing direct mail, with scheduled sending. Used in
+            a published research project for data acquisition.
           </p>
           <div class="badges mb-4">
             <span class="badge">HTML</span>
@@ -475,13 +502,15 @@ em dados."
               href="#"
               target="_blank"
               class="btn btn-sm btn-primary btn-disabled"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="#"
               target="_blank"
               class="btn btn-sm btn-secondary btn-disabled"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -491,22 +520,21 @@ em dados."
             <div
               class="project-img-placeholder"
               data-title="CAM RZ25NP Web Control Panel"
-              data-description="Painel de controle web para câmera IP Sony RZ25NP. O oficial
-            necessita do Internet Explorer 8 ou menor."
+              data-description="Web control panel for the Sony RZ25NP IP camera. The official one requires Internet Explorer 8 or lower."
               data-images="images/p11.png"
               data-demo-url="#"
               data-code-url="https://github.com/giovanecf/rz25np-control-panel"
             >
               <img
                 src="images/p11.png"
-                alt="Imagem do CAM RZ25NP Web Control Panel"
+                alt="CAM RZ25NP Web Control Panel Image"
               />
             </div>
           </div>
           <h3 class="project-title">CAM RZ25NP Web Control Panel</h3>
-          <p class="text-muted mb-4">
-            Painel de controle web para câmera IP Sony RZ25NP. O oficial
-            necessita do Internet Explorer 8 ou menor.
+          <p class="text-muted mb-4" data-i18n="projectDescriptionCamControl">
+            Web control panel for the Sony RZ25NP IP camera. The official one
+            requires Internet Explorer 8 or lower.
           </p>
           <div class="badges mb-4">
             <span class="badge">HTML</span>
@@ -520,38 +548,44 @@ em dados."
               target="_blank"
               rel="noopener"
               class="btn btn-sm btn-primary btn-disabled"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="https://github.com/giovanecf/rz25np-control-panel"
               target="_blank"
               class="btn btn-sm btn-secondary"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
       </div>
 
-      <h3 class="section-subtitle mt-8">CASOS DE ESTUDO E PESQUISA</h3>
+      <h3
+        class="section-subtitle mt-8"
+        data-i18n="sectionProjectsSubtitleStudy"
+      >
+        CASE STUDIES AND RESEARCH
+      </h3>
       <div class="projects-grid">
         <div class="card project-card">
           <div class="project-image">
             <div
               class="project-img-placeholder"
               data-title="Task Timer"
-              data-description="Um cronômetro simples para cronometrar seu tempo de tarefa ao longo
-            da semana, mês e ano."
+              data-description="A simple stopwatch to time your task duration over the week, month, and year."
               data-images="images/p9.png"
               data-demo-url="https://newtasktime.netlify.app/"
               data-code-url="https://github.com/giovanecf/task-time"
             >
-              <img src="images/p9.png" alt="Imagem do Task Timer" />
+              <img src="images/p9.png" alt="Task Timer Image" />
             </div>
           </div>
           <h3 class="project-title">Task Timer</h3>
-          <p class="text-muted mb-4">
-            Um cronômetro simples para cronometrar seu tempo de tarefa ao longo
-            da semana, mês e ano.
+          <p class="text-muted mb-4" data-i18n="projectDescriptionTaskTimer">
+            A simple stopwatch to time your task duration over the week, month,
+            and year.
           </p>
           <div class="badges mb-4">
             <span class="badge">HTML</span>
@@ -564,13 +598,15 @@ em dados."
               target="_blank"
               rel="noopener"
               class="btn btn-sm btn-primary"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="https://github.com/giovanecf/task-time"
               target="_blank"
               class="btn btn-sm btn-secondary"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -579,18 +615,18 @@ em dados."
           <div class="project-image">
             <div
               class="project-img-placeholder"
-              data-title="O Modelo de Redação"
-              data-description="Site para criar modelos de redação para o ENEM."
+              data-title="The Essay Model"
+              data-description="Website to create essay models for ENEM."
               data-images="images/p10.png"
               data-demo-url="https://grand-cupcake-2a0329.netlify.app/"
               data-code-url="https://github.com/giovanecf/o-modelo-de-redacao"
             >
-              <img src="images/p10.png" alt="Imagem do O Modelo de Redação" />
+              <img src="images/p10.png" alt="The Essay Model Image" />
             </div>
           </div>
-          <h3 class="project-title">O Modelo de Redação</h3>
-          <p class="text-muted mb-4">
-            Site para criar modelos de redação para o ENEM.
+          <h3 class="project-title">The Essay Model</h3>
+          <p class="text-muted mb-4" data-i18n="projectDescriptionRedacaoModel">
+            Website to create essay models for ENEM.
           </p>
           <div class="badges mb-4">
             <span class="badge">HTML</span>
@@ -603,13 +639,15 @@ em dados."
               target="_blank"
               rel="noopener"
               class="btn btn-sm btn-primary"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="https://github.com/giovanecf/o-modelo-de-redacao"
               target="_blank"
               class="btn btn-sm btn-secondary"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -618,22 +656,20 @@ em dados."
           <div class="project-image">
             <div
               class="project-img-placeholder"
-              data-title="Homemade CFTV"
-              data-description="Shell Script que tranforma qualquer computador com distribuição
-            Linux em um CFTV - com gravação - utilizando o
-            software Guvcview(WebCam) + uma webcam."
+              data-title="Homemade CCTV"
+              data-description="Shell Script that turns any computer with a Linux distribution into a CCTV - with recording - using the Guvcview (WebCam) software + a webcam."
               data-images="images/p12.png"
               data-demo-url="#"
               data-code-url="https://github.com/giovanecf/homemade-cctv"
             >
-              <img src="images/p12.png" alt="Imagem do Homemade CFTV" />
+              <img src="images/p12.png" alt="Homemade CCTV Image" />
             </div>
           </div>
-          <h3 class="project-title">Homemade CFTV</h3>
-          <p class="text-muted mb-4">
-            Script que tranforma qualquer computador com distribuição Linux em
-            um CFTV - <strong>com gravação</strong> - utilizando o software
-            Guvcview(WebCam) + uma webcam.
+          <h3 class="project-title">Homemade CCTV</h3>
+          <p class="text-muted mb-4" data-i18n="projectDescriptionHomemadeCFTV">
+            Shell Script that turns any computer with a Linux distribution into
+            a CCTV - <strong>with recording</strong> - using the Guvcview
+            (WebCam) software + a webcam.
           </p>
           <div class="badges mb-4">
             <span class="badge">Shell Script</span>
@@ -644,13 +680,15 @@ em dados."
               target="_blank"
               rel="noopener"
               class="btn btn-sm btn-primary btn-disabled"
-              >VER</a
+              data-i18n="projectBtnView"
+              >VIEW</a
             >
             <a
               href="https://github.com/giovanecf/homemade-cctv"
               target="_blank"
               class="btn btn-sm btn-secondary"
-              >CÓDIGO</a
+              data-i18n="projectBtnCode"
+              >CODE</a
             >
           </div>
         </div>
@@ -658,7 +696,9 @@ em dados."
     </section>
 
     <section id="contact" class="section">
-      <h2 class="section-title">ENTRE EM CONTATO</h2>
+      <h2 class="section-title" data-i18n="sectionContactTitle">
+        GET IN TOUCH
+      </h2>
       <div class="card p-8 contact-container">
         <form
           class="contact-form"
@@ -666,11 +706,11 @@ em dados."
           method="POST"
         >
           <div class="input-group">
-            <label for="name">Nome</label>
+            <label for="name" data-i18n="formLabelName">Name</label>
             <input type="text" id="name" name="name" required class="input" />
           </div>
           <div class="input-group">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="formLabelEmail">Email</label>
             <input
               type="email"
               id="email"
@@ -680,7 +720,7 @@ em dados."
             />
           </div>
           <div class="input-group">
-            <label for="message">Mensagem</label>
+            <label for="message" data-i18n="formLabelMessage">Message</label>
             <textarea
               id="message"
               name="message"
@@ -689,12 +729,16 @@ em dados."
               class="input"
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-primary mt-4 js-button-effect">
-            Enviar Mensagem
+          <button
+            type="submit"
+            class="btn btn-primary mt-4 js-button-effect"
+            data-i18n="formSubmitButton"
+          >
+            Send Message
           </button>
         </form>
         <div class="contact-info">
-          <p>
+          <p data-i18n="contactInfoEmail">
             Email:
             <a
               href="mailto:geofigcastro@gmail.com"
@@ -704,7 +748,7 @@ em dados."
               >geofigcastro@gmail.com</a
             >
           </p>
-          <p>
+          <p data-i18n="contactInfoLinkedIn">
             LinkedIn:
             <a
               href="https://www.linkedin.com/in/geovani-figueiredo/"
@@ -714,7 +758,7 @@ em dados."
               >/in/geovani-figueiredo/</a
             >
           </p>
-          <p>
+          <p data-i18n="contactInfoGitHub">
             GitHub:
             <a
               href="https://github.com/giovanecf"
@@ -768,15 +812,25 @@ em dados."
     <div id="project-modal" class="modal-overlay">
       <div class="modal-content">
         <span class="modal-close">&times;</span>
-        <h3 id="modal-title" class="modal-title">Título do Projeto</h3>
+        <h3
+          id="modal-title"
+          class="modal-title"
+          data-i18n="modalTitlePlaceholder"
+        >
+          Project Title
+        </h3>
 
         <div class="modal-carousel-container">
           <div id="modal-images-wrapper" class="modal-images-wrapper"></div>
           <button id="carousel-prev" class="carousel-control prev">&lt;</button>
           <button id="carousel-next" class="carousel-control next">&gt;</button>
         </div>
-        <p id="modal-description" class="modal-description">
-          Descrição ampliada do projeto.
+        <p
+          id="modal-description"
+          class="modal-description"
+          data-i18n="modalDescriptionPlaceholder"
+        >
+          Expanded project description.
         </p>
         <div class="modal-actions">
           <a
@@ -784,20 +838,21 @@ em dados."
             href="#"
             class="btn btn-sm btn-primary"
             target="_blank"
-            >Ver Demo</a
+            data-i18n="modalButtonDemo"
+            >View Demo</a
           >
           <a
             id="modal-code-link"
             href="#"
             class="btn btn-sm btn-secondary"
             target="_blank"
-            >Código Fonte</a
+            data-i18n="modalButtonCode"
+            >Source Code</a
           >
         </div>
       </div>
     </div>
 
-    <script src="script.js
-  "></script>
+    <script src="script.js"></script>
   </body>
 </html>
