@@ -267,3 +267,142 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
+
+// Internationalization - I18n
+const translations = {
+  "pt-BR": {
+    navSkills: "Habilidades",
+    navProjects: "Projetos",
+    navContact: "Contato",
+    downloadCV: "Download CV",
+    heroTitle: "Criando com",
+    heroSubtitle:
+      "FULLSTACK DEVELOPER | CONSTRUINDO EXPERIÊNCIAS WEB INCRÍVEIS",
+    heroDescription:
+      "Apaixonado por criar soluções intuitivas, escaláveis e de alta performance.",
+    sectionSkillsTitle: "MINHAS HABILIDADES",
+    skillCategoryFrontend: "FRONTEND",
+    skillCategoryBackend: "BACKEND",
+    skillCategoryDatabase: "BANCO DE DADOS",
+    skillCategoryDevOps: "DEVOPS E PLATAFORMAS",
+    sectionProjectsTitle: "MEUS PROJETOS",
+    sectionProjectsSubtitleProfessional: "PROJETOS PROFISSIONAIS",
+    sectionProjectsSubtitleStudy: "CASOS DE ESTUDO E PESQUISA",
+    projectBtnView: "VER",
+    projectBtnCode: "CÓDIGO",
+    projectDescriptionFafarSite:
+      "Site Institucional para a Faculdade de Farmácia da UFMG",
+    projectDescriptionFafarIntranet:
+      "Intranet para a Faculdade de Farmácia da UFMG",
+    projectDescriptionEscutaFafar:
+      "Sistema Web para registro de sessões de apoio psicológico aos estudantes, permitindo à universidade acompanhar problemas comuns, analisar tendências e melhorar os serviços estudantis com base em dados.",
+    projectDescriptionStageManager:
+      "Sistema Web para gerenciamento de projeção de mídias e timers para palestras.",
+    projectDescriptionCf7Crud:
+      "Add-on WordPress para Contact Form 7, que permite a criação e edição de objetos com base no formulário criado pelo CF7.",
+    projectDescriptionHermes:
+      "Serviço de envio de e-mails em Node.js com Nodemailer.",
+    projectDescriptionPrometheusBot:
+      "Serviço de raspagem de dados na web, para integração com serviços e automatização de tarefas burocráticas.",
+    projectDescriptionDirectMailSender:
+      "Sistema Web gerenciador de mala direta, com envio agendado. Utilizado em projeto de pesquisa, publicado, para aquisição de dados.",
+    projectDescriptionCamControl:
+      "Painel de controle web para câmera IP Sony RZ25NP. O oficial necessita do Internet Explorer 8 ou menor.",
+    projectDescriptionTaskTimer:
+      "Um cronômetro simples para cronometrar seu tempo de tarefa ao longo da semana, mês e ano.",
+    projectDescriptionRedacaoModel:
+      "Site para criar modelos de redação para o ENEM.",
+    projectDescriptionHomemadeCFTV:
+      "Script que tranforma qualquer computador com distribuição Linux em um CFTV - com gravação - utilizando o software Guvcview(WebCam) + uma webcam.",
+    sectionContactTitle: "ENTRE EM CONTATO",
+    formLabelName: "Nome",
+    formLabelEmail: "Email",
+    formLabelMessage: "Mensagem",
+    formSubmitButton: "Enviar Mensagem",
+    contactInfoEmail: "Email:",
+    contactInfoLinkedIn: "LinkedIn:",
+    contactInfoGitHub: "GitHub:",
+    modalTitlePlaceholder: "Título do Projeto",
+    modalDescriptionPlaceholder: "Descrição ampliada do projeto.",
+    modalButtonDemo: "Ver Demo",
+    modalButtonCode: "Código Fonte",
+  },
+  en: {
+    navSkills: "Skills",
+    navProjects: "Projects",
+    navContact: "Contact",
+    downloadCV: "Download CV",
+    heroTitle: "Creating with",
+    heroSubtitle: "FULLSTACK DEVELOPER | BUILDING AMAZING WEB EXPERIENCES",
+    heroDescription:
+      "Passionate about creating intuitive, scalable, and high-performance solutions.",
+    sectionSkillsTitle: "MY SKILLS",
+    skillCategoryFrontend: "FRONTEND",
+    skillCategoryBackend: "BACKEND",
+    skillCategoryDatabase: "DATABASE",
+    skillCategoryDevOps: "DEVOPS AND PLATFORMS",
+    sectionProjectsTitle: "MY PROJECTS",
+    sectionProjectsSubtitleProfessional: "PROFESSIONAL PROJECTS",
+    sectionProjectsSubtitleStudy: "CASE STUDIES AND RESEARCH",
+    projectBtnView: "VIEW",
+    projectBtnCode: "CODE",
+    projectDescriptionFafarSite:
+      "Institutional Website for the Faculty of Pharmacy at UFMG",
+    projectDescriptionFafarIntranet:
+      "Intranet for the Faculty of Pharmacy at UFMG",
+    projectDescriptionEscutaFafar:
+      "Web System for recording psychological support sessions for students, allowing the university to track common issues, analyze trends, and improve student services based on data.",
+    projectDescriptionStageManager:
+      "Web System for managing media projection and timers for lectures.",
+    projectDescriptionCf7Crud:
+      "WordPress Add-on for Contact Form 7, which allows the creation and editing of objects based on the form created by CF7.",
+    projectDescriptionHermes:
+      "Email sending service in Node.js with Nodemailer.",
+    projectDescriptionPrometheusBot:
+      "Web data scraping service, for integration with services and automation of bureaucratic tasks.",
+    projectDescriptionDirectMailSender:
+      "Web System for managing direct mail, with scheduled sending. Used in a published research project for data acquisition.",
+    projectDescriptionCamControl:
+      "Web control panel for the Sony RZ25NP IP camera. The official one requires Internet Explorer 8 or lower.",
+    projectDescriptionTaskTimer:
+      "A simple stopwatch to time your task duration over the week, month, and year.",
+    projectDescriptionRedacaoModel: "Website to create essay models for ENEM.",
+    projectDescriptionHomemadeCFTV:
+      "Shell Script that turns any computer with a Linux distribution into a CCTV - **with recording** - using the Guvcview (WebCam) software + a webcam.",
+    sectionContactTitle: "GET IN TOUCH",
+    formLabelName: "Name",
+    formLabelEmail: "Email",
+    formLabelMessage: "Message",
+    formSubmitButton: "Send Message",
+    contactInfoEmail: "Email:",
+    contactInfoLinkedIn: "LinkedIn:",
+    contactInfoGitHub: "GitHub:",
+    modalTitlePlaceholder: "Project Title",
+    modalDescriptionPlaceholder: "Expanded project description.",
+    modalButtonDemo: "View Demo",
+    modalButtonCode: "Source Code",
+  },
+};
+
+function setLanguage(currentLanguage) {
+  const elements = document.querySelectorAll("[data-i18n]");
+
+  elements.forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+
+    if (translations[currentLanguage] && translations[currentLanguage][key]) {
+      el.textContent = translations[currentLanguage][key];
+    }
+  });
+
+  document.querySelector("html").lang = currentLanguage;
+}
+
+document
+  .querySelector("#lang-pt")
+  .addEventListener("click", () => setLanguage("pt-BR"));
+document
+  .querySelector("#lang-en")
+  .addEventListener("click", () => setLanguage("en"));
+
+setLanguage("en");
