@@ -239,6 +239,15 @@ a:hover {
   width: 100%;
 }
 
+/* Language Options Section */
+.language-options {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 /* Hero Section*/
 
 .hero-section {
